@@ -1,3 +1,5 @@
+package me.andreemeilio.aplikasikasir;
+
 import java.util.Scanner;
 
 public class Main {
