@@ -7,26 +7,26 @@ public class Menu {
 
 
     public String getNama_menu(){
-        return "";
+        return nama_menu;
     }
 
     public void setNama_menu(String nama_menu){
-
+        this.nama_menu = nama_menu;
     }
 
     public double getHarga(){
-        return 0;
+        return harga;
     }
 
     public void setHarga(double harga){
-
+        this.harga = harga;
     }
 
     public String getKategori(){
-        return "";
+        return kategori; 
     }
 
     public void setKategori(String kategori){
-        
+        this.kategori = kategori;
     }
 }
