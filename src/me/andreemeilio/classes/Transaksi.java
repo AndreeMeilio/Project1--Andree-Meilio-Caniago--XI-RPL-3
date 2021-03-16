@@ -40,6 +40,28 @@ public class Transaksi {
     }
 
     public void cetakStruk(){
-        
+        System.out.println("\n======== ALDEBARAMEN ========");
+        System.out.println("No Transaksi : " + noTransaksi);
+        System.out.println("Pemesan : " + namaPesanan);
+        System.out.println("Tanggal : " + tanggal);
+
+        //cek jika nomor meja kosong, berarti take away
+        if (noMeja.equals("")){
+            noMeja = "Take Away";
+        }
+
+        System.out.println("Meja : " + noMeja);
+        System.out.println("=============================");
+        for (int i = 0; i < pesanan.size(); i++){
+            Pesanan psn = pesanan.get(i);
+            Menu m = psn.getMenu();
+            String pesanan = psn.getJumlah() + " " + m.getNama_menu() + "\t" + (m.getHarga() * psn.getJumlah());
+
+            if (m.getKategori().equals("Kuah")){
+                pesanan = " " + pesanan;
+            }
+
+            System.out.println(pesanan);
+        }
     }
 }

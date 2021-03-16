@@ -3,7 +3,6 @@ package me.andreemeilio.main;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import javax.security.auth.kerberos.KerberosKey;
 
 import me.andreemeilio.classes.DaftarMenu;
 import me.andreemeilio.classes.Kuah;
@@ -107,6 +106,8 @@ public class MainAplikasiKasir {
             System.out.print("Tambah Pesanan Lagi? [Y/N] : ");
             pesan_lagi = input.next();
         } while (pesan_lagi.equalsIgnoreCase("Y"));
+
+        trans.cetakStruk();
     }
 
     public void generateDaftarMenu(){
