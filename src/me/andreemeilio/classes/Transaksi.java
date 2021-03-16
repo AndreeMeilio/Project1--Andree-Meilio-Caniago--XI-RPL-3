@@ -63,5 +63,43 @@ public class Transaksi {
 
             System.out.println(pesanan);
         }
+
+        
+    }
+
+    public void setBiayaService(double biayaService) {
+        this.biayaService = biayaService;
+    }
+
+    public void setPajak(double pajak){
+        this.pajak = pajak;
+    }
+
+    public double hitungTotalPesanan(){
+        
+        for (int i = 0; i < pesanan.size(); i++){
+            Pesanan psn = pesanan.get(i);
+            double harga = psn.getMenu().getHarga();
+            totalBayar += (harga * psn.getJumlah());
+        }
+
+        return totalBayar;
+    }
+
+    public double hitungPajak(){
+        return totalBayar * pajak;
+    }
+
+    public double hitungBiayaService(){
+        return totalBayar * biayaService;
+    }
+
+    public double hitungTotalBayar(double pajak, double service){
+        totalBayar = totalBayar + pajak + service;
+        return totalBayar;
+    }
+
+    public double hitungKembalian(double uang_bayar){
+        return uang_bayar - totalBayar;
     }
 }

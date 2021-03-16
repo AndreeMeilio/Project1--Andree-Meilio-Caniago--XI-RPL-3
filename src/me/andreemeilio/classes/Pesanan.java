@@ -39,10 +39,4 @@ public class Pesanan {
     public void setJumlah(int jumlah) {
         this.jumlah = jumlah;
     }
-
-
-    
-
-
-    
 }
